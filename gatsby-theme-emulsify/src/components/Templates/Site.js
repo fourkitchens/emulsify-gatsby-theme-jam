@@ -10,6 +10,7 @@ import "./main-design.css";
 
 export default ({
   title,
+  pageTitle,
   body,
   docPages,
   designSystems,
@@ -47,7 +48,7 @@ export default ({
           designSystems={designSystems}
         />
         <div className="main-content">
-          <h1 className="main-title">{title}</h1>
+          <h1 className="main-title">{pageTitle}</h1>
           {tabs.length ? <Tabs tabs={tabs} id={id} /> : null}
           <div className="main-content-content">
             <MDXRenderer>{body}</MDXRenderer>

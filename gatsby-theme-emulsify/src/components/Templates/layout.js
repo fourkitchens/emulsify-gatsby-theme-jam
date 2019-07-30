@@ -35,6 +35,7 @@ const Heading = level => ({ props, children }) => {
 export default props => {
   const { pageContext } = props;
   const post = props.data.mdx;
+  console.log(post.frontmatter)
 
   /**
    * These components are exposed to the style guide authors
@@ -74,6 +75,7 @@ export default props => {
         collection={post.fields.collection}
         id={post.id}
         menu={componentNodes}
+        pageTitle={post.frontmatter.title}
         fields={post.fields}
         frontmatter={post.frontmatter}
         body={post.body}
