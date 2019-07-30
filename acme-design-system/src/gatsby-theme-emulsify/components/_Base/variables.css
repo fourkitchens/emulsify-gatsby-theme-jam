@@ -1,0 +1,49 @@
+:root {
+  /* Spacing */
+  --gutter-width: 1rem;
+  /* Fonts */
+  --font-family-body: 'DM Sans', sans-serif;
+  --font-family-header: 'DM Sans', sans-serif;
+  --font-family-code: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
+  /* Borders */
+  --border-radius: 3px;
+  /* Color Variables */
+  --color-var--yellow: #ff0;
+  --color-var--gray-lighter: #E2EBF2;
+  --color-var--gray-light: #C1C9CF;
+  --color-var--gray: #889096;
+  --color-var--gray-dark: #6E7479;
+  --color-var--gray-darker: #505558;
+  --color-var--gray-darkest: #313436;
+  --color-var--black: #313436;
+  --color-var--white: #fff;
+  --color-var--green-light: #35AA4E;
+  --color-var--red: #c11200;
+  --color-var--red-light: #dc7065;
+  --color-var--blue: #00055e;
+  
+  /* Color Usage */
+  /* Defaults */
+  --color--body-text: var(--color-var--gray-darkest);
+  /* Header */
+  --color--header-bg: var(--color-var--red);
+  --color--header-text: var(--color-var--white);
+  /* Tabs */
+  --color--tabs-default-bg: var(--color-var--black);
+  --color--tabs-default-text: var(--color-var--white);
+  --color--tabs-hover-bg: var(--color-var--blue);
+  --color--tabs-active-bg: var(--color-var--white);
+  --color--tabs-active-text: var(--color-var--gray-dark);
+  /* Sidebar */
+  --color--sidebar-bg: var(--color-var--blue);
+  --color--sidebar-text: var(--color-var--gray-lighter);
+  --color--sidebar-text: var(--color-var--white);
+  --color--sidebar-dropdown: var(--color-var--gray-lighter);
+  /* Parent Menu */
+  --color--parent-menu-bg: var(--color-var--gray-darkest);
+  --color--parent-menu-text: var(--color-var--white);
+
+  /* Dots */
+  --dot-bg-color: var(--color-var--red);
+  --dot-color: var(--color-var--red-light);
+}

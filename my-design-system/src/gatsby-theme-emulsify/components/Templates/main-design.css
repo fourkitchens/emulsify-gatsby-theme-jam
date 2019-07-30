@@ -1,0 +1,17 @@
+.main-title {
+  background: linear-gradient(var(--color-var--green), var(--color-var--black)), url('./hero.jpg');
+  background-size: cover;
+  font-size: 3.25rem;
+  color: var(--color--header-text);
+  margin-bottom: 0;
+  padding: 12rem 0;
+  text-align: center;
+  background-blend-mode: multiply;
+}
+
+@media screen and (min-width: 768px) {
+  .main-title {
+  font-size: 5rem;
+  padding: 9rem 0;
+  }
+}

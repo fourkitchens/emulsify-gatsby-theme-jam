@@ -1,0 +1,4 @@
+{
+  "private": true,
+  "workspaces": ["gatsby-theme-emulsify", "my-design-system", "acme-design-system"]
+}
