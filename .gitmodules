@@ -1,0 +1,3 @@
+[submodule "gatsby-theme-emulsify"]
+	path = gatsby-theme-emulsify
+	url = git@github.com:fourkitchens/gatsby-theme-emulsify.git
