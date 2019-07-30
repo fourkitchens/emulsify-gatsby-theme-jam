@@ -122,6 +122,13 @@ publishToStyleGuide: true
 
 This page will be automatically added to the menu bar in your design system.
 
+## Examples
+
+The following design systems were build with Emulsify:
+
+* https://my-design-system-emulsify.netlify.com/
+* https://acme-design-system-emulsify.netlify.com/
+
 ## Contributing
 
 ### Setup
