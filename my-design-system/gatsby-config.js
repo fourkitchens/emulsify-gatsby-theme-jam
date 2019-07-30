@@ -11,6 +11,10 @@ module.exports = {
             name: "B&E Security",
             link: "/"
           },
+          {
+            name: "Acme Design System",
+            link: "https://acme-design-system-emulsify.netlify.com/"
+          }
         ],
         // Site Metadata for style guide
         siteMetadata: {

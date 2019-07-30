@@ -11,6 +11,10 @@ module.exports = {
             name: "Acme Corporation",
             link: "/"
           },
+          {
+            name: "My Design System",
+            link: "https://my-design-system-emulsify.netlify.com/"
+          }
         ],
         // Site Metadata for style guide
         siteMetadata: {
