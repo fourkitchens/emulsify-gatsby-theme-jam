@@ -122,6 +122,12 @@ publishToStyleGuide: true
 
 This page will be automatically added to the menu bar in your design system.
 
+## Contributing
+
+### Setup
+* `yarn` inside yarn workspace root
+* `yarn workspace acme-design-system develop`
+
 ## FAQs on component driven design/development
 <details>
 <summary>
