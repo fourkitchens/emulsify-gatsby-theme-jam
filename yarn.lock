@@ -5476,30 +5476,6 @@ gatsby-telemetry@^1.1.7:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby-theme-emulsify@^1.0.0-alpha.3:
-  version "1.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-emulsify/-/gatsby-theme-emulsify-1.0.0-alpha.3.tgz#c24b291a0eac1ffb0de792c8b8df204dc63a7ebb"
-  integrity sha512-KeAyIHo0lu4hNdp05TJJ8GStVIqiLS+sr68MM7MNwx7AcbhlBWX9IVVztTWZ6q4wCpJAe+roQJBzLhe34324bg==
-  dependencies:
-    "@mdx-js/mdx" "^1.0.21"
-    "@mdx-js/react" "^1.0.21"
-    cross-env "5.0.5"
-    gatsby "^2.13.15"
-    gatsby-plugin-mdx "^1.0.11"
-    gatsby-plugin-page-creator "^2.0.13"
-    gatsby-plugin-react-helmet "^3.0.12"
-    gatsby-plugin-react-svg "^2.1.1"
-    gatsby-plugin-sharp "^2.1.5"
-    gatsby-source-filesystem "^2.0.39"
-    gatsby-transformer-remark "^2.4.0"
-    gh-pages "^2.0.1"
-    js-yaml "^3.13.1"
-    prism-react-renderer "^0.1.7"
-    react "^16.8.6"
-    react-dom "^16.8.6"
-    react-helmet "^5.2.1"
-    twig "^1.13.3"
-
 gatsby-transformer-remark@^2.4.0:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.10.tgz#b799615f7b5041fda6e939e85b8b6365a132c069"

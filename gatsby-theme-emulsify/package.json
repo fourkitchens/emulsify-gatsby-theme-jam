@@ -2,7 +2,7 @@
   "name": "gatsby-theme-emulsify",
   "version": "1.0.0-alpha.4",
   "description": "Emulsify Gatsby Theme",
-  "main": "index.js",
+  "main": "gatsby-config.js",
   "keywords": [
     "gatsby",
     "gatsby-theme",
