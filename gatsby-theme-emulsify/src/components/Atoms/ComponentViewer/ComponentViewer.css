@@ -1,0 +1,9 @@
+.ComponentViewer {
+    background-color: var(--color-var--gray-lighter);
+    border-width:0;
+    border-radius: var(--border-radius);
+    height: auto;
+    margin: 0;
+    padding: 4%;
+    width: 92%;
+}
