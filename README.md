@@ -38,7 +38,7 @@ module.exports = {
         componentLibPath: 'components', // Where your component library lives
         docPagesPath: 'styleguide', // Where your custom styleguide pages live
         basePath: __dirname, // Needed to make above paths relative to your project
-        designSystems: [ // Optional for Parent/Child Design Systems
+        designSystems: [
           {
             name: "Acme Corporation", // Other design system you may want to link to in a parent/child situation
             link: "https://acme-design-system.netlify.com"
@@ -71,7 +71,7 @@ publishToStyleGuide: true
 
 Create a `Code.mdx` file alongside one of your component.
 
-Inside of `Code.mdx`, simply use the `<Code />`, `<Component />`, and/or `<TableOfContents />` components in your MDX to fluidly author your docs and inline code snippets and rendered examples of your component.
+Inside of `Code.mdx`, use the `<Code />`, `<Component />`, and/or `<TableOfContents />` components in your MDX to fluidly author your docs and inline code snippets and rendered examples of your component.
 
 #### Example
 ```mdx
