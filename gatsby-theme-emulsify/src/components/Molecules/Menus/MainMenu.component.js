@@ -67,7 +67,7 @@ export default class MainMenu extends Component {
     const isComponentsMenu = name => name === "Components";
 
     return (
-      <div>
+      <React.Fragment>
         {Object.keys(groupedMenuItems).map((parentKey, parentIndex) => {
           const parentName = parentKey.split("__").pop();
           let activeItem = false;
@@ -111,7 +111,7 @@ export default class MainMenu extends Component {
             </li>
           );
         })}
-      </div>
+      </React.Fragment>
     );
   }
 }

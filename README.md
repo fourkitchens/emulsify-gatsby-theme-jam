@@ -7,11 +7,19 @@
 
 ## A Modern Workflow is Component-driven
 
-Components win. They’re the building blocks of UI. Everywhere you look, people are building component libraries and they’re using component based frameworks to build them. Working on a component library is hard work and ensuring an organization buys into your design system is even harder. Storybook has become the defacto ["workshop"](http://bradfrost.com/blog/post/the-workshop-and-the-storefront/) for components. However, it is not appropriate source for a organization wide design system which includes all sorts of other information and may only display a subset of the components in your library.
+Components win. They’re the building blocks of UI. Everywhere you look, people are building component libraries and they’re using component based frameworks to build them. Working on a component library is hard work and ensuring an organization buys into your design system is even harder. Storybook has become the defacto ["workshop"](http://bradfrost.com/blog/post/the-workshop-and-the-storefront/) for components. However, it is not the appropriate tool for a organization's design system, which includes all sorts of other information and may only display a subset of the components in your library.
 
-Emulsify is a customizable and themeable design system built with Gatsby. It reads your component library and builds a design system for you. Using MDX you can author custom documenation for each component and other helpful pages for your design system's audience.
+Emulsify is a customizable and themeable design system _generator_ built with Gatsby. It reads your component library and builds a design system for you. Using MDX you can author custom documenation for each component and other helpful pages for your design system's audience.
 
 ## Setup
+
+### Quickstart
+
+Using a Gatsby Starter is the fastest way to get up-and-running.
+
+- [Twig Starter](https://github.com/fourkitchens/gatsby-starter-emulsify-twig)
+
+#### Manual Installation
 
 * Create a directory for your design system.
 ```sh
@@ -63,7 +71,7 @@ publishToStyleGuide: true
 
 Create a `Code.mdx` file alongside one of your component.
 
-Inside of `Code.mdx`. Use the `<Code />` and `<Component />` components in your MDX to fluidly author your docs and inline code snippets and rendered examples of your component.
+Inside of `Code.mdx`, use the `<Code />`, `<Component />`, and/or `<TableOfContents />` components in your MDX to fluidly author your docs and inline code snippets and rendered examples of your component.
 
 #### Example
 ```mdx
@@ -99,14 +107,14 @@ This file will be used to generate a "Code" tab on CTA component documentation. 
 ### Custom pages
 In a `styleguide` directory in your component library root directory, you can create custom pages to be added to your design system.
 
-Inside `styleguide`, create a directory called `01__Getting Started`.
+Inside `styleguide`, create a directory called `1__Getting Started`.
 
 <details>
 <summary>💡 Hint</summary>
-Prepending your directories with numbers like "01__" is a great way to sort your sidebar links.
+Prepending your directories with numbers like "1__" is a great way to sort your sidebar links.
 </details>
 
-Inside `01__Getting Started` create `Welcome.md`.
+Inside `1__Getting Started` create `Welcome.md`.
 
 #### Example
 
