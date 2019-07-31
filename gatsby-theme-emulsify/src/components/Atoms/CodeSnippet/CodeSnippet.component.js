@@ -12,11 +12,11 @@ import "./code-snippet.css";
  * Component that renders a CodeSnippet.
  */
 const CodeSnippet = props => {
-  const { code } = props;
+  const { code, language = "jsx" } = props;
 
   return (
     <div className="code-snippet">
-      <Highlight {...defaultProps} code={code.trim()} language="jsx">
+      <Highlight {...defaultProps} code={code.trim()} language={language}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style}>
             {tokens.map((line, i) => (

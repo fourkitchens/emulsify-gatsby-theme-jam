@@ -35,7 +35,6 @@ const Heading = level => ({ props, children }) => {
 export default props => {
   const { pageContext } = props;
   const post = props.data.mdx;
-  console.log(post.frontmatter)
 
   /**
    * These components are exposed to the style guide authors
@@ -60,10 +59,13 @@ export default props => {
             />
           ),
     Code: props =>
-      !pageContext.twigCode === null ? (
+      !pageContext.exampleCode === null ? (
         "Error: No Code Found"
       ) : (
-        <CodeSnippet code={`${pageContext.twigCode}`} />
+        <CodeSnippet
+          code={`${pageContext.exampleCode}`}
+          language={pageContext.exampleLanguage}
+        />
       )
   });
   const site = props.data.site;

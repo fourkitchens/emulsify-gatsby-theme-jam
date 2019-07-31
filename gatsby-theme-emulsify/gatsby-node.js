@@ -42,12 +42,18 @@ function createAssetMap(mdFiles, twigFiles, dataFiles, cssFiles, jsFiles) {
   }, []);
 }
 
+/**
+ */
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const ComponentPost = require.resolve(`./src/components/Templates/layout.js`);
   const IsolatedTwigComponent = require.resolve(
     `./src/components/Templates/IsolatedTwigComponent.js`
+  );
+  const IsolatedReactComponent = require.resolve(
+    `./src/components/Templates/IsolatedReactComponent.js`
   );
 
   return graphql(`
@@ -129,6 +135,9 @@ exports.createPages = ({ actions, graphql }) => {
     const dataFiles = result.data.dataFiles.nodes;
     const jsFiles = result.data.jsFiles.nodes;
 
+    const strToName = input =>
+      input ? input.replace(/\s+/g, "-").toLowerCase() : null;
+
     const assetMap = createAssetMap(
       mdFiles,
       twigComponents,
@@ -137,42 +146,74 @@ exports.createPages = ({ actions, graphql }) => {
       jsFiles
     );
 
-    mdFiles.forEach(mdFile => {
+    const mdFilePromises = mdFiles.map(mdFile => {
       const asset = assetMap.find(
         asset => mdFile.fields.parentDir === asset.mdFile.fields.parentDir
       );
-      const name = asset.twigFile
-        ? asset.twigFile.name.replace(/\s+/g, "-").toLowerCase()
-        : null;
-      const iframePath = `${name}-isolated`;
+
+      if (asset.jsFile) {
+        const fileRead = asset.jsFile
+          ? readFile(asset.jsFile.absolutePath)
+          : Promise.resolve("No Code found");
+        return fileRead.then(jsxCode => {
+          return createPage({
+            path: mdFile.fields.slug,
+            component: ComponentPost,
+            context: {
+              iframePath: `${strToName(asset.jsFile.name)}-isolated`,
+              exampleCode: String(jsxCode),
+              exampleLanguage: "jsx",
+              slug: mdFile.fields.slug,
+              collection: mdFile.fields.collection,
+              parentDir: mdFile.fields.parentDir
+            }
+          });
+        });
+      }
+
+      const iframePath = `${strToName(
+        _.get(asset, "twigFile.name", null)
+      )}-isolated`;
       const fileRead = asset.twigFile
         ? readFile(asset.twigFile.absolutePath)
         : Promise.resolve("No Code found");
       return fileRead.then(twigCode => {
-        createPage({
+        return createPage({
           path: mdFile.fields.slug,
           component: ComponentPost,
           context: {
             iframePath,
-            twigCode: String(twigCode),
+            exampleCode: String(twigCode),
+            exampleLanguage: "twig",
             slug: mdFile.fields.slug,
             collection: mdFile.fields.collection,
             parentDir: mdFile.fields.parentDir
           }
         });
       });
+
+      return Promise.resolve();
     });
 
-    return Promise.all(
-      assetMap.map(assets => {
+    return Promise.all([
+      ...mdFilePromises,
+      ...assetMap.map(assets => {
         const { twigFile, dataFile, jsFile, cssFile } = assets;
+
+        // If no twig or js file is provided, resolve immediately, no component page is needed.
+        if (!twigFile && !jsFile) {
+          return Promise.resolve();
+        }
+
+        if (!dataFile) {
+          throw new Error("You must provide a data file.");
+        }
 
         if (twigFile) {
           return readFile(dataFile.absolutePath, "utf8").then(yml => {
             const data = yaml.safeLoad(yml);
-            const name = twigFile.name.replace(/\s+/g, "-").toLowerCase();
             return createPage({
-              path: `${name}-isolated`,
+              path: `${strToName(twigFile.name)}-isolated`,
               component: IsolatedTwigComponent,
               context: {
                 data,
@@ -184,9 +225,24 @@ exports.createPages = ({ actions, graphql }) => {
             });
           });
         }
+
+        if (jsFile) {
+          return readFile(dataFile.absolutePath, "utf8").then(yml => {
+            const data = yaml.safeLoad(yml);
+            return createPage({
+              path: `${strToName(jsFile.name)}-isolated`,
+              component: IsolatedReactComponent,
+              context: {
+                data,
+                absolutePathToComponent: jsFile.absolutePath
+              }
+            });
+          });
+        }
+
         return Promise.resolve();
       })
-    );
+    ]);
   });
 };
 

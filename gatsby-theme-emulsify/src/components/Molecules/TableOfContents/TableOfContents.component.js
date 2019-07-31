@@ -10,7 +10,9 @@ const TableOfContents = ({ items }) => {
     <ul className="toc__list">
       {items.map(item => (
         <li key={item.url} className="toc__item">
-          <a className="toc__link" href={item.url}>{item.title}</a>
+          <a className="toc__link" href={item.url}>
+            {item.title}
+          </a>
           <TableOfContents items={item.items} />
         </li>
       ))}

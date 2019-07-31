@@ -49,57 +49,58 @@ export default class IsolatedTwigComponent extends React.Component {
     document.body.appendChild(s);
   };
 
-  componentDidMount() {
-    const {
-      data: {
-        sitePage: {
-          fields: { jsCode, cssCode }
-        }
-      }
-    } = this.props;
-    if (jsCode) {
-      this.addJs();
-    }
-    if (cssCode) {
-      this.addCss();
-    }
-  }
-  componentDidUpdate() {
-    const {
-      data: {
-        sitePage: {
-          fields: { jsCode, cssCode }
-        }
-      }
-    } = this.props;
-    if (jsCode) {
-      this.addJs();
-    }
-    if (cssCode) {
-      this.addCss();
-    }
-  }
+  //componentDidMount() {
+  //  const {
+  //    data: {
+  //      sitePage: {
+  //        fields: { jsCode, cssCode }
+  //      }
+  //    }
+  //  } = this.props;
+  //  if (jsCode) {
+  //    this.addJs();
+  //  }
+  //  if (cssCode) {
+  //    this.addCss();
+  //  }
+  //}
+  //componentDidUpdate() {
+  //  const {
+  //    data: {
+  //      sitePage: {
+  //        fields: { jsCode, cssCode }
+  //      }
+  //    }
+  //  } = this.props;
+  //  if (jsCode) {
+  //    this.addJs();
+  //  }
+  //  if (cssCode) {
+  //    this.addCss();
+  //  }
+  //}
 
   render() {
-    const {
-      data: {
-        sitePage: {
-          fields: { componentHtml }
-        }
-      }
-    } = this.props;
-    return <div dangerouslySetInnerHTML={{ __html: componentHtml }} />;
+    //const {
+    //  data: {
+    //    sitePage: {
+    //      fields: { componentHtml }
+    //    }
+    //  }
+    //} = this.props;
+    //return <div dangerouslySetInnerHTML={{ __html: componentHtml }} />;
+    return <div>lol</div>;
   }
 }
 
-export const pageQuery = graphql`
-  query IsolatedTwigComponentQuery($relativePath: String) {
-    sitePage(context: { relativePath: { eq: $relativePath } }) {
-      fields {
-        componentHtml
-        jsCode
-        cssCode
-      }
-    }
-  }
-`;
+//export const pageQuery = graphql`
+//  query IsolatedTwigComponentQuery($relativePath: String) {
+//    sitePage(context: { relativePath: { eq: $relativePath } }) {
+//      fields {
+//        componentHtml
+//        jsCode
+//        cssCode
+//      }
+//    }
+//  }
+//`;
