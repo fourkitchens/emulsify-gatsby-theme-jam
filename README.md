@@ -158,3 +158,9 @@ Components are the reusable chunks of web sites. They can be small (inputs, labe
 Maintain a Style Guide that is Never Out of Date
 Everyone loves a style guide, but few projects are able to maintain them. Emulsify takes a "living style guide" approach where the style guide components are the same ones in use on the live site. No more worries about components going out of date or looking different than the style guide.
 </details>
+
+## Roadmap
+- [Theme UI](https://theme-ui.com/) integration
+- Move Twig functionality to Gatsby plugin
+- Code tabs (tab per language loaded)
+- Search
