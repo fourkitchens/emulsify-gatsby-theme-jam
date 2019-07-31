@@ -13,13 +13,13 @@
   --color-var--gray-light: #C1C9CF;
   --color-var--gray: #889096;
   --color-var--gray-dark: #6E7479;
-  --color-var--gray-darker: #505558;
+  --color-var--gray-darker: #545454;
   --color-var--gray-darkest: #313436;
   --color-var--black: #313436;
   --color-var--white: #fff;
   --color-var--green-light: #35AA4E;
   --color-var--green: #2B8A31;
-  --color-var--blue: #346ABB;
+  --color-var--blue: #b2cecf;
   
   /* Color Usage */
   /* Defaults */
@@ -28,7 +28,7 @@
   --color--header-bg: var(--color-var--green-light);
   --color--header-text: var(--color-var--white);
   /* Tabs */
-  --color--tabs-default-bg: var(--color-var--gray-dark);
+  --color--tabs-default-bg: var(--color-var--gray-darker);
   --color--tabs-default-text: var(--color-var--white);
   --color--tabs-hover-bg: var(--color-var--blue);
   --color--tabs-active-bg: var(--color-var--white);

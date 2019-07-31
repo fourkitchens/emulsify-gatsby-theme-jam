@@ -1,17 +1,52 @@
+@media screen and (min-width: 768px) {
+  .sidebar {
+    flex-basis: 25%;
+  }
+}
+
+.sidebar__heading a {
+  background: url(./B&E.png) no-repeat scroll 0 0;
+  background-size: contain;
+  display: block;
+  padding-top: 30px;
+  text-indent: -9999px;
+  width: 253px;
+}
+
+.sidebar__header .parent-menu__toggle {
+  display: none;
+}
+
 .main-title {
-  background: linear-gradient(var(--color-var--green), var(--color-var--black)), url('./hero.jpg');
+  background: linear-gradient(var(--color-var--blue), var(--color-var--gray)), url('./hero.jpg');
   background-size: cover;
   font-size: 3.25rem;
   color: var(--color--header-text);
   margin-bottom: 0;
   padding: 12rem 0;
-  text-align: center;
   background-blend-mode: multiply;
 }
 
 @media screen and (min-width: 768px) {
   .main-title {
-  font-size: 5rem;
-  padding: 9rem 0;
+    font-size: 5rem;
+    padding: 9rem 4rem;
   }
+}
+
+.main-menu li {
+  color: #3d5367;
+}
+
+.menu-item {
+  font-size: 1.4rem;
+}
+
+.menu-icon {
+  top: 12px;
+}
+
+.main-content-content,
+.tabs a.active {
+  background-color: #fffdef;
 }
