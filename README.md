@@ -146,15 +146,16 @@ The following design systems were build with Emulsify:
 ## FAQs on component driven design/development
 <details>
 <summary>
-What is Component-driven Development?
+<b>Q: What is Component-driven Development?</b>
 </summary>
-The familiar metaphor of thinking about the web as "pages" is inaccurate. The web is better thought of as a collection of components that are assembled together: headers, footers, navigation items, and so on. For instance, a site has a header that gets applied to every page, and if you update the header that change shows up throughout the site. This approach to building sites is called component-driven development.
-
-Components are the reusable chunks of web sites. They can be small (inputs, labels, buttons), medium (header, footer, cards), or large (landing page template, photo gallery). Emulsify adopts the method of Atomic Design, where the smallest components are atoms, which are assembled into molecules, organisms, templates, and finally pages. (Yes, we still call them "pages"; it makes it easier to talk with clients.)
+<p>The familiar metaphor of thinking about the web as "pages" is inaccurate. The web is better thought of as a collection of components that are assembled together: headers, footers, navigation items, and so on. For instance, a site has a header that gets applied to every page, and if you update the header that change shows up throughout the site. This approach to building sites is called component-driven development.</p>
+<p>Components are the reusable chunks of web sites. They can be small (inputs, labels, buttons), medium (header, footer, cards), or large (landing page template, photo gallery). Emulsify adopts the method of Atomic Design, where the smallest components are atoms, which are assembled into molecules, organisms, templates, and finally pages. (Yes, we still call them "pages"; it makes it easier to talk with clients.)</p>
 </details>
 
 <details>
-<summary>What is a Living Style Guide?</summary>
+<summary>
+<b>Q: What is a Living Style Guide?</b>
+</summary>
 Maintain a Style Guide that is Never Out of Date
 Everyone loves a style guide, but few projects are able to maintain them. Emulsify takes a "living style guide" approach where the style guide components are the same ones in use on the live site. No more worries about components going out of date or looking different than the style guide.
 </details>
