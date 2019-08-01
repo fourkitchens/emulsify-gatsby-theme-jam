@@ -161,6 +161,8 @@ Everyone loves a style guide, but few projects are able to maintain them. Emulsi
 
 ## Roadmap
 - [Theme UI](https://theme-ui.com/) integration
+- Add React support
 - Move Twig functionality to Gatsby plugin
+- Clean up gatsby node to abstract language support
 - Code tabs (tab per language loaded)
 - Search
