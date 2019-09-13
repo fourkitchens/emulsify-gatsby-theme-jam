@@ -10,9 +10,9 @@
 #}
 
 {% set additional_attributes = {
-  class: "something",
-  id: "testId",
-  "some-array-attribute": ['array-item', 'array-item-2'],
+  class: bem('button'),
+  id: 'testId',
+  "aria-label": 'button',
 } %}
 
 <button {{ add_attributes(additional_attributes) }}>

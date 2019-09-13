@@ -8,9 +8,13 @@
     "develop": "gatsby develop"
   },
   "dependencies": {
+    "add-attributes-twig-extension": "0.0.2",
+    "bem-twig-extension": "0.0.2",
     "gatsby": "^2.13.42",
     "gatsby-theme-emulsify": "^1.0.0-alpha.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "twig": "^1.13.3",
+    "twig-drupal-filters": "^2.0.0"
   }
 }

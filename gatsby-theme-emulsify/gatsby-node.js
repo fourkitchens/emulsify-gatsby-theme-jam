@@ -2,76 +2,20 @@ const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const util = require("util");
 const Twig = require("twig");
+var twigDrupal = require('twig-drupal-filters')
+const twigBEM = require('bem-twig-extension');
+const twigAddAttributes = require('add-attributes-twig-extension');
 const yaml = require("js-yaml");
 const fs = require("fs");
-
-Twig.extendFunction("bem", function(base_class, modifiers = [], blockname = '', extra = []) {
-  let classes = [];
-
-  // If using a blockname to override default class.
-  if (blockname.length) {
-    // Set blockname class.
-    classes.push(blockname + '__' + base_class);
-
-    // Set blockname--modifier classes for each modifier.
-    if (modifiers.length && Array.isArray(modifiers)) {
-      modifiers.forEach(function(modifier) {
-        classes.push(blockname + '__' + base_class + '--' + modifier);
-      });
-    }
-  }
-  // If not overriding base class.
-  else {
-    // Set base class.
-    classes.push(base_class);
-    // Set base--modifier class for each modifier.
-    if (modifiers.length && Array.isArray(modifiers)) {
-      modifiers.forEach(function(modifier) {
-        classes.push(base_class + '--' + modifier);
-      });
-    }
-  }
-
-  // If extra non-BEM classes are added.
-  if (extra.length && Array.isArray(extra)) {
-    extra.forEach(function(extra_class) {
-      classes.push($extra_class);
-    });
-  }
-
-  attributes = 'class="' + classes.join(' ') + '"';
-  return attributes;
-});
-
-Twig.extendFunction("add_attributes", function(additional_attributes = []) {
-  attributes = [];
-
-  for (const [key, value] of Object.entries(additional_attributes)) {
-    // If not keys array.
-    if (key !== '_keys') {
-      // If multiples items in value as array (e.g., class: ['one', 'two']).
-      if (Array.isArray(value)) {
-        attributes.push(key + '="' + value.join(' ') + '"');
-      }
-      else {
-        // Handle bem() output (pass in exactly the result).
-        if (value.includes('=')) {
-          attributes.push(value);
-        }
-        else {
-          attributes.push(key + '="' + value + '"');
-        }
-      }
-    }
-  }
-
-  return attributes.join(' ');
-});
 
 const readFile = util.promisify(fs.readFile);
 const renderTwig = util.promisify(Twig.renderFile);
 
 const IN_PRODUCTION = process.env.NODE_ENV === "production";
+
+twigDrupal(Twig);
+twigBEM(Twig);
+twigAddAttributes(Twig);
 
 Twig.cache(IN_PRODUCTION);
 
