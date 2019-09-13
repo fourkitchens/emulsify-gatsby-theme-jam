@@ -1480,6 +1480,11 @@ acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.2.1.tgz#3ed8422d6dec09e6121cc7a843ca86a330a86b51"
   integrity sha512-JD0xT5FCRDNyjDda3Lrg/IxFscp9q4tiYtxE1/nOzlKCk7hIRuYjhq1kCNkbPjMRMZuFq20HNQn1I9k8Oj0E+Q==
 
+add-attributes-twig-extension@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/add-attributes-twig-extension/-/add-attributes-twig-extension-0.0.2.tgz#4878318354ad7e504d667648bedc8bc9c9d5918b"
+  integrity sha512-lCiWd7mKaBcKwJdqj4HNbTFJoRhxaasZIP8zR0bvKK79ZRTwx+bRj3aZil+A/aBgU7rq9vw/EffUSHdycRL1eA==
+
 address@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/address/-/address-1.0.3.tgz#b5f50631f8d6cec8bd20c963963afb55e06cbce9"
@@ -2047,6 +2052,11 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+bem-twig-extension@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/bem-twig-extension/-/bem-twig-extension-0.0.2.tgz#dbc4c4b113b324f205a7d873ca289e717190f9a3"
+  integrity sha512-LG89ArgXVYRzsIAsUBtfjh7iOh0x5jCxtnS3jP6b8R3XtE5uoSrNXFjqrNoGItwwhU7wZQVT4mBleuGmmDQRqg==
 
 better-assert@~1.0.0:
   version "1.0.2"
@@ -11442,6 +11452,11 @@ slice-ansi@^2.1.0:
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
 
+slugg@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/slugg/-/slugg-1.2.1.tgz#e752af2241af3f2714463c5de225cea47608740a"
+  integrity sha1-51KvIkGvPycURjxd4iXOpHYIdAo=
+
 snake-case@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/snake-case/-/snake-case-2.1.0.tgz#41bdb1b73f30ec66a04d4e2cad1b76387d4d6d9f"
@@ -12431,7 +12446,15 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-twig@^1.13.3:
+twig-drupal-filters@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/twig-drupal-filters/-/twig-drupal-filters-2.0.0.tgz#fd3e36adfd6398d5b1d012f950a5f9abd5581b5a"
+  integrity sha1-/T42rf1jmNWx0BL5UKX5q9VYG1o=
+  dependencies:
+    slugg "^1.2.1"
+    twig "^1.12.0"
+
+twig@^1.12.0, twig@^1.13.3:
   version "1.13.3"
   resolved "https://registry.yarnpkg.com/twig/-/twig-1.13.3.tgz#895fe341beb6a3f53051318b90a40e0ab0e28fe9"
   integrity sha512-Kjart2102Kf0IdsEmLonSJKcByU7o9uiJhBde3GhrNHrX4XenT5WSKu4Hpkx+rF6Kyppeyd48BKsCREIOPXd/g==

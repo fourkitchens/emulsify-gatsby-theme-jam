@@ -2,6 +2,9 @@ const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const util = require("util");
 const Twig = require("twig");
+var twigDrupal = require('twig-drupal-filters')
+const twigBEM = require('bem-twig-extension');
+const twigAddAttributes = require('add-attributes-twig-extension');
 const yaml = require("js-yaml");
 const fs = require("fs");
 
@@ -9,6 +12,10 @@ const readFile = util.promisify(fs.readFile);
 const renderTwig = util.promisify(Twig.renderFile);
 
 const IN_PRODUCTION = process.env.NODE_ENV === "production";
+
+twigDrupal(Twig);
+twigBEM(Twig);
+twigAddAttributes(Twig);
 
 Twig.cache(IN_PRODUCTION);
 
