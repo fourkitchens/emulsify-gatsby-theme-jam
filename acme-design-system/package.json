@@ -8,8 +8,8 @@
     "develop": "gatsby develop"
   },
   "dependencies": {
-    "add-attributes-twig-extension": "0.0.2",
-    "bem-twig-extension": "0.0.2",
+    "add-attributes-twig-extension": "0.1.0",
+    "bem-twig-extension": "0.1.0",
     "gatsby": "^2.13.42",
     "gatsby-theme-emulsify": "^1.0.0-alpha.3",
     "react": "^16.8.6",
